@@ -1,0 +1,82 @@
+body {
+    display: table;
+    margin: 0 auto;
+    background: #74AFAD;
+}
+.nav li a,
+.lead,
+h4 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+input[type='search'],
+p,
+.fa span {
+    font-family: 'Roboto', sans-serif;
+}
+.panel {
+    margin-top: 7%;
+    width: 374px;
+    border-radius: 0;
+}
+.panel-heading {
+    padding: 0;
+    height: 50px;
+    width: 372px;
+}
+.nav-pills li a {
+    height: 50px;
+    width: 122.5px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 0;
+    padding: 0;
+}
+.panel-body {
+    padding: 8px;
+}
+.panel-heading li a{
+
+}
+.form-control {
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+.btn-default  {
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-left: none;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+}
+.lead a {
+    font-size: 16px;
+    margin: 0 0 0 15px;
+    text-decoration: none;
+}
+.user-icon {
+    height: 100%;
+}
+.user-icon i {
+    line-height: 60px;
+}
+.list-group-item .stream {
+    height: 100%;
+}
+.stream i {
+    line-height: 60px;
+}
+.fa-plus-circle {
+    color: green;
+}
+.fa-minus-circle {
+    color: red;
+}
+.game-name {
+    margin: 0 0 8px 0;
+}
+.stream-image {
+    margin: 0 0 10px 0;
+}
