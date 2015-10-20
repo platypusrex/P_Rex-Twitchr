@@ -9,7 +9,7 @@
         };
 
         var getCodeCamp = function(){
-            return $http.jsonp('https://api.twitch.tv/kraken/streams/?callback=JSON_CALLBACK&freecodecamp')
+            return $http.jsonp('https://api.twitch.tv/kraken/streams/?callback=JSON_CALLBACK&channel=freecodecamp, sodapoppin')
                 .then(function(res){
                     return res.data;
                 });
