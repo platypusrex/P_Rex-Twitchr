@@ -1,7 +1,9 @@
 body {
+    background: #74AFAD;
+}
+.panel-container {
     display: table;
     margin: 0 auto;
-    background: #74AFAD;
 }
 .nav li a,
 .lead,
