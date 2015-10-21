@@ -1,13 +1,7 @@
 div.panel-container
     div.panel.panel-default
-        div.panel-heading
-            ul.nav.nav-pills
-                li.active(data-toggle='tab')
-                    a(href='tab1') All
-                li(data-toggle='tab')
-                    a(href='tab2') Online
-                li(data-toggle='tab')
-                    a(href='tab3') Offline
+        div.featured-panel-heading.panel-heading
+            h3.text-center Featured Twitch Streams
         div.panel-body
             form.form-horizontal(role='form', name='searchStream', ng-submit='search(streamName)')
                 div.input-group
@@ -32,10 +26,10 @@ div.panel-container
                             div.row
                                 div.col-xs-6.text-right
                                     i.fa.fa-users
-                                        span {{stream.stream.channel.followers | number}}
+                                        span  {{stream.stream.channel.followers | number}}
                                 div.col-xs-6.text-left
                                     i.fa.fa-heart-o
-                                        span {{stream.stream.channel.views | number}}
+                                        span  {{stream.stream.channel.views | number}}
                             div.row
                                 div.col-xs-12
                                     i.fa.fa-eye

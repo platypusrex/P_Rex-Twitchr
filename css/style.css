@@ -1,5 +1,5 @@
 body {
-    background: #74AFAD;
+    background: #F6F6F6;
 }
 .panel-container {
     display: table;
@@ -21,21 +21,30 @@ p,
     width: 374px;
     border-radius: 0;
 }
-.panel-heading {
-    padding: 0;
-    height: 50px;
-    width: 372px;
+.camp-panel-heading .panel-heading {
+    /*padding: 0;*/
+    /*height: 50px;*/
+    /*width: 372px;*/
+}
+
+.panel-default>.panel-heading {
+    color: #F6F6F6;
+    background: #2B2B2B;
+    font-family: 'Oswald', sans-serif;
+}
+.featured-panel-heading h3 {
+    margin: 12px 0;
 }
 .nav-pills li a {
-    height: 50px;
-    width: 122.5px;
+    /*height: 50px;*/
+    width: 112px;
     text-align: center;
     line-height: 50px;
     border-radius: 0;
     padding: 0;
 }
 .panel-body {
-    padding: 8px;
+    /*padding: 8px;*/
 }
 .panel-heading li a{
 
@@ -70,7 +79,7 @@ p,
 .stream i {
     line-height: 60px;
 }
-.fa-plus-circle {
+.fa-check-circle-o {
     color: green;
 }
 .fa-minus-circle {

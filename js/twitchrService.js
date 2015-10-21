@@ -8,8 +8,8 @@
                 });
         };
 
-        var getCodeCamp = function(){
-            return $http.jsonp('https://api.twitch.tv/kraken/streams/?callback=JSON_CALLBACK&channel=freecodecamp, sodapoppin')
+        var getCodeCamp = function(username){
+            return $http.jsonp('https://api.twitch.tv/kraken/streams?callback=JSON_CALLBACK&channel=manvsgame,freecodecamp')
                 .then(function(res){
                     return res.data;
                 });

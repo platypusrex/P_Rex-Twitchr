@@ -1,6 +1,11 @@
 (function(twitchapp){
     twitchapp.controller('campController', ['$scope', 'twitchService', function($scope, twitchService){
 
+        var getCampStreams = function(){
+            var campStreams = ["freecodecamp", "storbeck", "terakilobyte", "habathcx","RobotCaleb","thomasballinger","noobs2ninjas","beohoff"];
+            campStreams.forEach();
+        };
+
         var onSuccess = function(data){
             $scope.codeCamp = data;
             console.log($scope.codeCamp);

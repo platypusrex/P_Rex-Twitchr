@@ -24,7 +24,7 @@
         };
 
         $scope.getClass = function(stream){
-            return stream !== null ? 'fa fa-plus-circle fa-2x' : 'fa fa-minus-circle fa-2x';
+            return stream !== null ? 'fa fa-check-circle-o fa-2x' : 'fa fa-minus-circle fa-2x';
         };
 
         twitchService.getStreams().then(onSuccess, onError);
