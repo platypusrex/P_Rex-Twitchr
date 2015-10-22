@@ -16,27 +16,27 @@ div.panel-container
                         button.btn.btn-default(type='submit')
                             i.glyphicon.glyphicon-search
         ul.list-group
-            li.list-group-item(ng-repeat='stream in streams | limitTo:10')
+            li.list-group-item(ng-repeat='stream in streams')
                 div.stream(data-toggle='collapse', ng-attr-data-target='{{"#streamInfo-" + $index}}')
-                    img.logo.img-circle(ng-src='{{stream.stream.channel.logo}}')
+                    img.logo.img-circle(ng-src='{{stream.logo}}')
                     span.lead
-                        a(ng-href='{{stream.stream.channel.url}}', target='_blank') {{stream.stream.channel.display_name}}
-                    i(ng-class='getClass(stream.stream)', title='Online!').pull-right
-                div.collapse(ng-attr-id='{{"streamInfo-" + $index}}')
+                        a(ng-href='{{stream.url}}', target='_blank') {{stream.displayName}}
+                    i(ng-attr-class='{{stream.icon}} pull-right')
+                div.collapse(ng-attr-id='{{"streamInfo-" + $index}}', ng-hide='!stream.preview')
                     hr
                     div.row
                         div.col-xs-12.text-center
-                            h4.text-center.game-name {{stream.stream.channel.game}}
+                            h4.text-center.game-name {{stream.game}}
                             p {{stream.title}}
-                            img.stream-image(ng-src='{{stream.stream.preview.medium}}')
+                            img.stream-image(ng-src='{{stream.preview}}')
                             div.row
                                 div.col-xs-6.text-right
                                     i.fa.fa-users
-                                        span {{stream.stream.channel.followers | number}}
+                                        span  {{stream.followers | number}}
                                 div.col-xs-6.text-left
                                     i.fa.fa-heart-o
-                                        span {{stream.stream.channel.views | number}}
+                                        span  {{stream.views | number}}
                             div.row
                                 div.col-xs-12
                                     i.fa.fa-eye
-                                        span {{stream.stream.viewers |  number}}
+                                        span  {{stream.viewers |  number}}
