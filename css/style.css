@@ -16,6 +16,21 @@ p,
 .fa span {
     font-family: 'Roboto', sans-serif;
 }
+.navbar-custom {
+    background: #2B2B2B;
+    height: 70px;
+}
+.navbar-custom a {
+    color: #F6F6F6;
+    padding-top: 22px;
+}
+.navbar-header .navbar-brand {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 22px;
+}
+.navbar-custom .navbar-collapse .navbar-nav {
+    padding-top: 10px;
+}
 .panel {
     margin-top: 7%;
     width: 374px;
