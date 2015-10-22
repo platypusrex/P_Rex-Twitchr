@@ -82,8 +82,8 @@ p,
 .fa-check-circle-o {
     color: green;
 }
-.fa-minus-circle {
-    color: red;
+.fa-exclamation-circle {
+    color: #DE1B1B;
 }
 .game-name {
     margin: 0 0 8px 0;

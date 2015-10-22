@@ -33,7 +33,7 @@
                             return {
                                 logo: val.logo,
                                 displayName: val.display_name,
-                                icon: 'fa fa-exclamation-triangle fa-2x',
+                                icon: 'fa fa-exclamation-circle fa-2x',
                                 url: val.url
                             }
                         }else{
