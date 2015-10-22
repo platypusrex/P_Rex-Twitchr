@@ -28,9 +28,5 @@
         };
 
         twitchService.getStreams().then(onSuccess, onError);
-        /*twitchService.getCodeCamp().then(function(data){
-         $scope.codeCamp = data;
-         }, onError);*/
-
     }]);
 }(angular.module('TwitchApp')));

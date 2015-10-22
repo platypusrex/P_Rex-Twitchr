@@ -1,5 +1,5 @@
 (function(twitchapp){
-    twitchapp.controller('campController', ['$scope', 'twitchService', '$q', '$http', '$rootScope', function($scope, twitchService, $q, $http, $rootScope){
+    twitchapp.controller('campController', ['$scope', 'twitchService', '$q', function($scope, twitchService, $q){
 
         var getCampStreams = function(){
             var campStreams = ["freecodecamp", "Mr4thDimention", "MartinCohen", "abnercoimbre","dasmehdi","lsrpnet","noobs2ninjas","assertchris", "NashCasts"];
@@ -51,8 +51,6 @@
                             }
                         }
                     });
-                    console.log(streamData);
-                    console.log($scope.streams);
                 });
             }, onError);
         };
