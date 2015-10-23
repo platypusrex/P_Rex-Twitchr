@@ -23,7 +23,7 @@
         }
 
         var searchStreams = function(streamName){
-            return $http.jsonp('https://api.twitch.tv/kraken/streams?callback=JSON_CALLBACK&channel=' + streamName)
+            return $http.jsonp('https://api.twitch.tv/kraken/search/streams?callback=JSON_CALLBACK&q=' + streamName)
                 .then(function(res){
                     return res.data;
                 });

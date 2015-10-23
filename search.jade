@@ -1,0 +1,36 @@
+div.panel-container
+    div.panel.panel-default
+        div.featured-panel-heading.panel-heading
+            h3.text-center Search Twitch Streams
+        div.panel-body
+            form.form-horizontal(role='form', name='searchStream', ng-submit='search(searchVal)')
+                div.input-group
+                    input.form-control(type='search', placeholder='Search Streams', ng-model='searchVal')
+                    span.input-group-btn
+                        button.btn.btn-default(type='submit')
+                            i.glyphicon.glyphicon-search
+        ul.list-group
+            li.list-group-item(ng-repeat='stream in streams | limitTo:10')
+                div.stream(data-toggle='collapse', ng-attr-data-target='{{"#streamInfo-" + $index}}')
+                    img.logo.img-circle(ng-src='{{stream.logo}}')
+                    span.lead
+                        a(ng-href='{{stream.url}}', target='_blank') {{stream.displayName}}
+                    i(ng-attr-class='{{stream.icon}} pull-right')
+                div.collapse(ng-attr-id='{{"streamInfo-" + $index}}')
+                    hr
+                    div.row
+                        div.col-xs-12.text-center
+                            h4.text-center.game-name {{stream.game}}
+                            p {{stream.title}}
+                            img.stream-image(ng-src='{{stream.preview}}')
+                            div.row
+                                div.col-xs-6.text-right
+                                    i.fa.fa-users
+                                        span  {{stream.followers | number}}
+                                div.col-xs-6.text-left
+                                    i.fa.fa-heart-o
+                                        span  {{stream.views | number}}
+                            div.row
+                                div.col-xs-12
+                                    i.fa.fa-eye
+                                        span {{stream.viewers |  number}}

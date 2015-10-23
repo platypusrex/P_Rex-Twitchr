@@ -10,6 +10,10 @@
                     templateUrl: 'codecamp.html',
                     controller: 'campController'
                 })
+                .when('/search', {
+                    templateUrl: 'search.html',
+                    controller: 'searchController'
+                })
                 .otherwise({redirectTo: '/featured'});
         }]);
 }());
