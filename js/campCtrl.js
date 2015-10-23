@@ -1,5 +1,10 @@
 (function(twitchapp){
     twitchapp.controller('campController', ['$scope', 'twitchService', '$q', function($scope, twitchService, $q){
+        $scope.buttonVal = 1;
+
+        $scope.userToggleButton = function(val){
+            $scope.buttonVal = val;
+        };
 
         var getCampStreams = function(){
             var campStreams = ["freecodecamp", "Mr4thDimention", "MartinCohen", "abnercoimbre","dasmehdi","lsrpnet","noobs2ninjas","assertchris", "NashCasts"];
@@ -34,7 +39,8 @@
                                 logo: val.logo,
                                 displayName: val.display_name,
                                 icon: 'fa fa-exclamation-circle fa-2x',
-                                url: val.url
+                                url: val.url,
+                                status: 3
                             }
                         }else{
                             return {
@@ -47,7 +53,8 @@
                                 views: val.stream.channel.views,
                                 viewers: val.stream.viewers,
                                 preview: val.stream.preview.medium,
-                                title: val.stream.channel.status
+                                title: val.stream.channel.status,
+                                status: 2
                             }
                         }
                     });

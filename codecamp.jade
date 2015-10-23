@@ -3,26 +3,26 @@ div.panel-container
         div.camp-panel-heading.panel-heading
             ul.nav.nav-pills
                 li.active(data-toggle='tab')
-                    a(href='tab1') All
+                    a(href='tab1', ng-click='userToggleButton(1)') All
                 li(data-toggle='tab')
-                    a(href='tab2') Online
+                    a(href='tab2', ng-click='userToggleButton(2)') Online
                 li(data-toggle='tab')
-                    a(href='tab3') Offline
+                    a(href='tab3', ng-click='userToggleButton(3)') Offline
         div.panel-body
             form.form-horizontal(role='form', name='searchStream', ng-submit='search(streamName)')
                 div.input-group
-                    input.form-control(type='search', placeholder='Search Streams', ng-model='streamName')
+                    input.form-control(type='search', placeholder='Search Streams', ng-model='query')
                     span.input-group-btn
                         button.btn.btn-default(type='submit')
                             i.glyphicon.glyphicon-search
         ul.list-group
-            li.list-group-item(ng-repeat='stream in streams')
+            li.list-group-item(ng-repeat='stream in streams | filter:query', ng-show='buttonVal === 1 || buttonVal === stream.status')
                 div.stream(data-toggle='collapse', ng-attr-data-target='{{"#streamInfo-" + $index}}')
                     img.logo.img-circle(ng-src='{{stream.logo}}')
                     span.lead
                         a(ng-href='{{stream.url}}', target='_blank') {{stream.displayName}}
                     i(ng-attr-class='{{stream.icon}} pull-right')
-                div.collapse(ng-attr-id='{{"streamInfo-" + $index}}', ng-hide='!stream.preview')
+                div.collapse(ng-attr-id='{{"streamInfo-" + $index}}', ng-hide='stream.status === 3')
                     hr
                     div.row
                         div.col-xs-12.text-center

@@ -5,12 +5,12 @@ div.panel-container
         div.panel-body
             form.form-horizontal(role='form', name='searchStream', ng-submit='search(streamName)')
                 div.input-group
-                    input.form-control(type='search', placeholder='Search Streams', ng-model='streamName')
+                    input.form-control(type='search', placeholder='Search Streams', ng-model='query')
                     span.input-group-btn
                         button.btn.btn-default(type='submit')
                             i.glyphicon.glyphicon-search
         ul.list-group
-            li.list-group-item(ng-repeat='stream in streams | limitTo:10')
+            li.list-group-item(ng-repeat='stream in streams | limitTo:10 | filter:query')
                 div.stream(data-toggle='collapse', ng-attr-data-target='{{"#streamInfo-" + $index}}')
                     img.logo.img-circle(ng-src='{{stream.stream.channel.logo}}')
                     span.lead
