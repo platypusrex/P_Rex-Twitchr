@@ -1,5 +1,5 @@
 body {
-    background: #F5F3EE; /* url("http://www.wall321.com/thumbnails/detail/20120705/mario%20bros%201920x1200%20wallpaper_www.wall321.com_73.jpg")no-repeat fixed center center / cover;*/
+    background: #F5F3EE;
 }
 .panel-container {
     display: table;
@@ -127,4 +127,26 @@ p,
 }
 .stream-image {
     margin: 0 0 10px 0;
+}
+
+.list-group-item.ng-enter,
+.list-group-item.ng-leave {
+    transition: transform 400ms, margin 600ms;
+}
+
+.list-group-item.ng-enter,
+.list-group-item.ng-leave-active {
+    transform: translate3d(-2000px, 0, 0);
+    margin-bottom: -82px;
+}
+
+.list-group-item.ng-enter-active {
+    transform: translate3d(0, 0, 0);
+    margin-bottom: 1px;
+}
+
+.ng-enter-stagger,
+.ng-leave-stagger {
+    transition-delay: 100ms;
+    transition-duration: 0;
 }

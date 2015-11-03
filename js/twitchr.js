@@ -1,5 +1,5 @@
 (function(){
-    angular.module('TwitchApp', ['ngRoute'])
+    angular.module('TwitchApp', ['ngRoute', 'ngAnimate'])
         .config(['$routeProvider', function($routeProvider){
             $routeProvider
                 .when('/featured', {
